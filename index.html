@@ -173,7 +173,62 @@
                 padding: 20px 16px;
                 font-size: 0.9rem;
             }
-            
+
+            .db-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin-top: 20px;
+            }
+
+            .db-column ul {
+                padding-left: 20px;
+            }
+
+            .db-column h4 {
+                margin-bottom: 10px;
+                color: #2c3e50;
+            }
+
+            .inner-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                margin-top: 25px;
+            }
+
+            .inner-card {
+                background: #f8fafc;
+                padding: 15px 20px 20px 20px; /* reduced top padding */
+                border-radius: 10px;
+                border: 1px solid #e2e8f0;
+            }
+
+            .inner-card h4 {
+                margin-top: 0;   /* remove default top margin */
+                margin-bottom: 12px;
+            }
+
+            .inner-card ul {
+                padding-left: 20px;
+            }
+
+            #contact a {
+                color: #1f6feb;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            #contact a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .inner-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
             @media (min-width: 768px) {
             section {
                 max-width: 1000px;
@@ -236,19 +291,139 @@
         </header>
         <nav>
             <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-	    <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
             <a href="#skills"><i class="fa-solid fa-gears"></i> Skills</a>
             <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
             <a href="#enhancements"><i class="fa-solid fa-rocket"></i> Enhancements</a>
+            <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
             <a href="#contact"><i class="fa-solid fa-address-card"></i></i> Contact</a>
         </nav>
 
         <section id="about">
             <h2>About Me <i class="fa-solid fa-user"></i></h2>
             <div class="card">
-                Experienced Database Administrator and Cloud Engineer with hands-on expertise in AWS, PostgreSQL, Oracle, and Python automation.
-                Specialized in building scalable cloud workflows, automating complex DBA operations, and developing AI-driven solutions
-                for intelligent monitoring, validation, and decision support.
+                Database Administrator with 2+ years of experience in PostgreSQL, Oracle, and AWS RDS/Aurora. Strong 
+                background in automating DBA operations using Python and AWS services. Actively building AI-assisted tools 
+                using Lang Chain and RAG to enhance database monitoring, deployment validation, and incident resolution. 
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills <i class="fa-solid fa-gears"></i></h2>
+                <div class="card">
+                    <div class="skill-group">
+                        <h4><i class="fa-brands fa-aws"></i> AWS Cloud</h4>
+                        <span>Aurora RDS</span><span>EC2</span><span>Lambda</span><span>S3</span>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4><i class="fa-solid fa-database"></i> Database</h4>
+                        <span>PostgreSQL</span><span>Oracle</span>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4><i class="fa-solid fa-code"></i> Scripting</h4>
+                        <span>Python</span><span>Shell</span>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4><i class="fa-solid fa-desktop"></i> OS</h4>
+                        <span>Linux</span>
+                    </div>
+
+                    
+
+                    <div class="skill-group">
+                        <h4><i class="fa-solid fa-brain"></i> GenAI</h4>
+                        <span>RAG</span><span>LLMs</span><span>LangChain</span>
+                    </div>
+                </div>
+        </section>
+
+       
+        <section id="experience">
+            <h2>Experience <i class="fa-solid fa-briefcase"></i></h2>
+
+            <div class="card">
+                <h3>Database Administrator</h3>
+                <p><strong>Vitech Systems Group</strong> | 2024 – Present</p>
+
+                <div class="inner-grid">
+                    <div class="inner-card">
+                    <h4>PostgreSQL & AWS Aurora RDS</h4>
+                    <ul>
+                        <li>Installed and configured PostgreSQL software on Linux and Windows servers.</li>
+                        <li>Created and maintained PostgreSQL databases.</li>
+                        <li>Configured and managed <code>pg_hba.conf</code> for authentication and access control.</li>
+                        <li>Performed backup and restore operations using <code>pg_dump</code> and <code>pg_restore</code>.</li>
+                        <li>Created and managed database templates and clones for environment refreshes.</li>
+                        <li>Performed schema-level and metadata backups and restores using <code>pg_dump</code> and <code>pg_restore</code>.</li>
+                        <li>Performed table-level backups and restores for selective data recovery and troubleshooting.</li>
+                        <li>Created and administered AWS Aurora PostgreSQL RDS clusters.</li>
+                        <li>Performed Aurora RDS cluster cloning for non-production environments.</li>
+                        <li>Created RDS snapshots and performed cross-account snapshot copy.</li>
+                        <li>Restored databases from RDS snapshots and performed Point-in-Time Recovery (PITR).</li>
+                        <li>Worked on Aurora RDS patching and version upgrades.</li>
+                        <li>Worked on scale-up and scale-down activities based on client requirements.</li>
+                        <li>Generated <code>pgBadger</code> reports.</li>
+                        <li>Performed routine <code>VACUUM</code> and <code>ANALYZE</code> operations across entire databases as well as specific tables based on performance requirements.</li>
+                        <li>Used <code>pg_repack</code> to reorganize tables and indexes with minimal locking and downtime.</li>
+                        <li>Created and managed database users and roles, including read-only and application-specific access, and assigned and maintained schema-level and object-level privileges.</li>
+                        <li>Performed data scrambling/masking in PostgreSQL databases to secure sensitive data during lower-environment refreshes.</li>
+                    </ul>
+                    </div>
+
+            
+                    <div class="inner-card">
+                    <h4>Oracle Database Administration</h4>
+                        <ul>
+                        <li>Understanding of Oracle Memory Architecture (SGA, PGA).</li>
+                        <li>Installed Oracle software on Linux and Windows platforms.</li>
+                        <li>Created Oracle databases using DBCA (GUI) and silent mode with response files.</li>
+                        <li>Configured and maintained Oracle Listener and TNS networking.</li>
+                        <li>Configured and managed Undo Tablespaces.</li>
+                        <li>Performed Oracle database defragmentation activities.</li>
+                        <li>Created and managed ASM disk partitions.</li>
+                        <li>Performed RMAN backup and restore operations.</li>
+                        <li>Executed logical backups and restores using EXPDP / IMPDP utilities.</li>
+                        <li>Created and managed database users and roles, including read-only and application-specific access.</li>
+                        <li>Assigned and maintained schema-level and object-level privileges.</li>
+                        <li>Performed data scrambling/masking in Oracle databases to secure sensitive data during lower-environment refreshes.</li>
+                        <li>Exposure to Oracle Multitenant architecture (CDB / PDB).</li>
+                        <li>Exposure to Oracle RAC environments, including monitoring and basic administrative support.</li>
+                        <li>Exposure Dataguard module to create primary and stand by databases</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="enhancements">
+            <h2>Key Enhancements & Contributions (Last 2 Years)
+                <i class="fa-solid fa-rocket"></i>
+            </h2>
+
+            <div class="grid-2">
+
+                <div class="card enhancements">
+                    <h3>Automation & Enhancements</h3>
+                    <ul>
+                        <li>Automated Blue-Green deployment creation, including Green RDS provisioning and switchover, to enable low-downtime PostgreSQL releases.</li>
+                        <li>Implemented cross-account RDS snapshot copy between AWS accounts for DR and environment refreshes.</li>
+                        <li>Enhanced <code>pg_restore</code> automation to dynamically calculate parallel restore jobs based on RDS instance class and database count.</li>
+                        <li>Developed a Python-based monitoring script to capture PostgreSQL lock details every minute for proactive troubleshooting.</li>
+                    </ul>
+                </div>
+
+                <div class="card enhancements">
+                    <h3>GenAI Initiatives</h3>
+                    <ul>
+                        <li>Built an AI-assisted validation framework to analyze Blue-Green deployment packages and ensure database compatibility prior to deployment.</li>
+                        <li>Developed an AI-powered Jira Bot to suggest solutions for newly created Jira tickets.</li>
+                        <li>Generated weekly AI-based metrics comparing developer-implemented fixes versus AI-suggested solutions.</li>
+                        <li>Automated weekly ingestion of closed Jira tickets into a vector database to continuously improve AI-assisted analysis and recommendations.</li>
+                </ul>
+                </div>
+
             </div>
         </section>
 
@@ -277,103 +452,29 @@
             </div>
         </section>
 
-
-        <section id="skills">
-            <h2>Skills <i class="fa-solid fa-gears"></i></h2>
-                <div class="card">
-                    <div class="skill-group">
-                        <h4><i class="fa-brands fa-aws"></i> AWS Cloud</h4>
-                        <span>Aurora RDS</span><span>EC2</span><span>Lambda</span><span>S3</span>
-                    </div>
-
-                    <div class="skill-group">
-                        <h4><i class="fa-solid fa-code"></i> Scripting</h4>
-                        <span>Python</span><span>Shell</span>
-                    </div>
-
-                    <div class="skill-group">
-                        <h4><i class="fa-solid fa-desktop"></i> OS</h4>
-                        <span>Linux</span>
-                    </div>
-
-                    <div class="skill-group">
-                        <h4><i class="fa-solid fa-database"></i> Database</h4>
-                        <span>PostgreSQL</span><span>Oracle</span>
-                    </div>
-
-                    <div class="skill-group">
-                        <h4><i class="fa-solid fa-brain"></i> GenAI</h4>
-                        <span>RAG</span><span>LLMs</span><span>LangChain</span>
-                    </div>
-                </div>
-        </section>
-
-        <section id="experience">
-            <h2>Experience <i class="fa-solid fa-briefcase"></i></h2>
-            <div class="card">
-                <h3>Database Administrator</h3>
-                <p><strong>Vitech Systems Group</strong> | 2024 – Present</p>
-                <ul>
-                    <li>Administering PostgreSQL and Oracle databases on AWS RDS</li>
-                    <li>Automating backup, restore, and migration workflows</li>
-                    <li>Supporting Blue-Green deployments and production operations</li>
-                    <li>Developing Python and Shell automation scripts</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="enhancements">
-            <h2>Key Enhancements & Contributions (Last 2 Years) <i class="fa-solid fa-rocket"></i></h2>
-
-            <div class="grid-2">
-                <div class="card enhancements">
-                <h3>Cloud & DBA Automation</h3>
-                <ul>
-                    <li>Implemented cross-account RDS snapshot copy between AWS accounts.</li>
-                    <li>Enhanced pg_restore to dynamically calculate restore jobs based on RDS instance class and database count.</li>
-                    <li>Enhanced master clone script to auto-start stopped SCRMB RDS and loop until available.</li>
-                    <li>Automated Blue-Green deployment validation and green RDS provisioning.</li>
-                    <li>Enhanced RDS scheduling scripts with structured logging and version-based conditional logic.</li>
-                </ul>
-                </div>
-
-                <div class="card enhancements">
-                <h3>Monitoring & Data Engineering</h3>
-                <ul>
-                    <li>Developed a Python script to capture PostgreSQL lock details every minute for monitoring.</li>
-                    <li>Worked on synthetic data generation for testing and validation.</li>
-                    <li>Built weekly metrics automation comparing Developer fixes vs AI-suggested fixes.</li>
-                </ul>
-                </div>
-
-                <div class="card enhancements">
-                <h3>AI & GenAI Initiatives</h3>
-                <ul>
-                    <li>Learned and applied Generative AI concepts: LLMs, LangChain, RAG, LangGraph.</li>
-                    <li>Developed an AI-powered Jira Bot to suggest solutions for newly created tickets.</li>
-                    <li>Automated ingestion of closed Jira tickets into a vector database on a weekly basis.</li>
-                </ul>
-                </div>
-
-                <div class="card enhancements">
-                <h3>Impact</h3>
-                <ul>
-                    <li>Reduced manual DBA effort through intelligent automation.</li>
-                    <li>Improved response time and consistency in Jira support workflows.</li>
-                    <li>Enabled scalable and repeatable Blue-Green deployments.</li>
-                </ul>
-                </div>
-
-            </div>
-        </section>
-
         <section id="contact">
             <h2>Contact <i class="fa-solid fa-address-card"></i></h2>
+
             <div class="card">
-                <p>Email: <strong>nikhil.talagana990@gmail.com</strong></p>
-                <p>Mobile No: <strong>9010617195</strong></p>
-                <p>GitHub: github.com/nikhil</p>
-                <p>LinkedIn: linkedin.com/in/nikhil</p>
+            <p>
+                <strong>Email:</strong> 
+                <a href="mailto:nikhil.talagana990@gmail.com">nikhil.talagana990@gmail.com</a>
+            </p>
+
+            <p>
+                <strong>Mobile No:</strong> 
+                <a href="tel:9010617195">9010617195</a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong> 
+                <a href="https://github.com/nikhil" target="_blank">github.com/nikhil</a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong> 
+                <a href="https://www.linkedin.com/in/ntalagana2002/" target="_blank">linkedin.com/in/ntalagana2002</a>
+            </p>
             </div>
         </section>
 
